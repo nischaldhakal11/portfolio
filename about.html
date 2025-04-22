@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malik's Vibe</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to bottom right, #1a202c, #2d3748);
+            color: #e2e8f0;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 1.125rem;
+            color: #e2e8f0;
+        }
+
+        .intro {
+            font-size: 1.25rem;
+            color: #d1d5db;
+            margin-top: 16px;
+        }
+
+        section {
+            max-width: 672px;
+            text-align: center;
+        }
+
+        .bio {
+            margin-bottom: 24px;
+        }
+
+        button {
+            margin-top: 24px;
+            padding: 12px 24px;
+            background-color: #4f46e5;
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #4338ca;
+        }
+
+        footer {
+            margin-top: 48px;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="fade-in">
+        <h1>Hey, I'm Malik</h1>
+        <p class="intro">Keeping it real, chasing growth, and vibing with meaning.</p>
+    </header>
+
+    <section class="fade-in">
+        <p class="bio">
+            My name is Nischal, but I go by Malik. I'm someone who values authenticity and brings a relaxed yet focused
+            energy to everything I do. Whether I’m exploring new interests, working on personal goals, or just vibing
+            with good conversations, I like to keep things real. I believe in evolving constantly, learning from every
+            experience, and staying true to who I am. I’m always up for creative ideas, deep talks, and moments that
+            feel meaningful — even in the smallest ways.
+        </p>
+        <p class="bio">
+            Let’s connect over something meaningful — a project, a thought, or just a good vibe.
+        </p>
+        <button id="connectBtn">Say What's Up</button>
+    </section>
+
+    <footer class="fade-in">
+        <p>Built with authenticity by Malik © 2025</p>
+    </footer>
+
+    <script>
+        // Fade-in animation on scroll
+        const elements = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        elements.forEach(el => observer.observe(el));
+
+        // Button interaction
+        document.getElementById('connectBtn').addEventListener('click', () => {
+            alert('Let’s vibe! Reach out at malik@example.com or slide into my DMs on X.');
+        });
+    </script>
+</body>
+
+</html>

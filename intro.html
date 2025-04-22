@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nischal's Intro</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #4b5563, #f3f4f6);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #1f2937;
+    }
+    .container {
+      text-align: center;
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 48px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      animation: slideIn 0.8s ease-out;
+    }
+    .aka {
+      font-size: 20px;
+      font-style: italic;
+      margin-bottom: 10px;
+      animation: fadeIn 0.8s ease-out 0.2s;
+      animation-fill-mode: backwards;
+    }
+    .vibe {
+      font-size: 18px;
+      margin-bottom: 20px;
+      animation: fadeIn 0.8s ease-out 0.4s;
+      animation-fill-mode: backwards;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .traits, .hobbies, .quotes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+    .tag, .quote {
+      background-color: #2563eb;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 16px;
+      font-size: 14px;
+    }
+    .traits .tag, .hobbies .tag, .quotes .quote {
+      animation: slideUp 0.5s ease-out;
+      animation-fill-mode: backwards;
+    }
+    .motto {
+      font-size: 20px;
+      font-style: italic;
+      font-weight: 500;
+      margin-bottom: 20px;
+      animation: slideIn 0.8s ease-out 2.4s;
+      animation-fill-mode: backwards;
+    }
+    .intro-text {
+      font-size: 18px;
+      margin-top: 20px;
+      animation: fadeIn 0.8s ease-out 2.6s;
+      animation-fill-mode: backwards;
+    }
+    .connect-btn {
+      margin-top: 20px;
+      padding: 8px 24px;
+      background-color: #3b82f6;
+      border: none;
+      border-radius: 16px;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+      animation: fadeIn 0.8s ease-out 2.8s;
+      animation-fill-mode: backwards;
+    }
+    .connect-btn:hover {
+      background-color: #60a5fa;
+      transform: scale(1.1);
+    }
+    .connect-btn:active {
+      transform: scale(0.95);
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* Staggered animations for tags */
+    .traits .tag:nth-child(1) { animation-delay: 0.8s; }
+    .traits .tag:nth-child(2) { animation-delay: 0.9s; }
+    .traits .tag:nth-child(3) { animation-delay: 1.0s; }
+    .traits .tag:nth-child(4) { animation-delay: 1.1s; }
+    .hobbies .tag:nth-child(1) { animation-delay: 1.4s; }
+    .hobbies .tag:nth-child(2) { animation-delay: 1.5s; }
+    .hobbies .tag:nth-child(3) { animation-delay: 1.6s; }
+    .quotes .quote:nth-child(1) { animation-delay: 2.0s; }
+    .quotes .quote:nth-child(2) { animation-delay: 2.1s; }
+    .quotes .quote:nth-child(3) { animation-delay: 2.2s; }
+    .quotes .quote:nth-child(4) { animation-delay: 2.3s; }
+  </style>
+</head>
+<body>
+  <div className="container">
+    <h1>Yo, I’m Nischal</h1>
+    <p className="aka">aka Malik</p>
+    <p className="vibe">Vibe: Chill but focused</p>
+    <div className="traits">
+      <h2>Traits</h2>
+      <div className="traits">
+        <span className="tag">Creative</span>
+        <span className="tag">Authentic</span>
+        <span className="tag">Driven</span>
+        <span className="tag">Deep thinker</span>
+      </div>
+    </div>
+    <div className="hobbies">
+      <h2>Hobbies</h2>
+      <div className="hobbies">
+        <span className="tag">Exploring new ideas</span>
+        <span className="tag">Leveling up</span>
+        <span className="tag">Vibing with good energy</span>
+      </div>
+    </div>
+    <div className="quotes">
+      <h2>Favorite Quotes</h2>
+      <div className="quotes">
+        <span className="quote">Stay curious, stay hungry.</span>
+        <span className="quote">Create something today that your future self will thank you for.</span>
+        <span className="quote">Vibes don’t lie; trust the energy.</span>
+        <span className="quote">Dream big, work hard, stay true.</span>
+      </div>
+    </div>
+    <p className="motto">“Keep it real, keep it moving.”</p>
+    <p className="intro-text">I stay curious, chill, and always true to myself. Let’s build something dope.</p>
+    <button className="connect-btn" onclick="alert('Let’s connect and create something awesome!')">Connect</button>
+  </div>
+</body>
+</html>
